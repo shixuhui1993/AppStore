@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_centerInParent="true"
+        android:gravity="center">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="#66000000"
+            app:riv_corner_radius="8dp"
+            app:riv_mutate_background="true" />
+
+        <ImageView
+            android:id="@+id/loading_iv"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/tv_load_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loading_iv"
+            android:layout_centerHorizontal="true"
+            android:text="加载中"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

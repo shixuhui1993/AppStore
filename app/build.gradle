@@ -1,0 +1,154 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'com.google.devtools.ksp' version '1.6.10-1.0.2'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.duoyou_cps.appstore"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    flavorDimensions "channel"
+    productFlavors {
+        guanfang {
+            buildConfigField 'String', 'UMENG_CHANNEL', "\"guanfang\""
+            dimension "channel"
+        }
+    }
+
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        dataBinding = true
+    }
+
+
+    applicationVariants.all { variant ->
+        def buildType2 = buildType.name
+        variant.outputs.each { output ->
+            def version = "v${versionName}"
+            def apkName = variant.flavorName
+            def fileName = "${apkName}_${version}_${getDate()}_${buildType2}.apk"
+            output.outputFileName = new File("../../apk/" + buildType2 + "/", fileName)
+        }
+    }
+
+    signingConfigs {
+        debug {
+            v1SigningEnabled true
+            v2SigningEnabled true
+            keyAlias 'duoyou'
+            keyPassword 'qq123123'
+            storeFile file('sz_box_manghe.jks')
+            storePassword 'qq123123'
+        }
+        release {
+            v1SigningEnabled true
+            v2SigningEnabled true
+            keyAlias 'duoyou'
+            keyPassword 'qq123123'
+            storeFile file('sz_box_manghe.jks')
+            storePassword 'qq123123'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+
+}
+kapt {
+    arguments {
+        arg("rxhttp_rxjava", "3.1.1") //可传入rxjava2、rxjava3或具体版本号，如 3.1.1
+//            arg("rxhttp_package", "rxhttp") //设置RxHttp相关类的包名，多module依赖时，需要配置不同的包名
+    }
+}
+ksp {
+    arg("rxhttp_rxjava", "3.1.1")
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    implementation 'androidx.core:core-ktx:1.2.0'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation project(path: ':flyco_tabLayout')
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+    implementation 'com.github.hackware1993:MagicIndicator:1.7.0'
+    implementation "androidx.fragment:fragment-ktx:1.3.5"
+
+    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
+    implementation 'com.github.liujingxing.rxhttp:rxhttp:2.8.5'
+    kapt 'com.github.liujingxing.rxhttp:rxhttp-compiler:2.8.5'
+
+
+    implementation 'io.reactivex.rxjava3:rxjava:3.1.1'
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+    implementation 'com.github.liujingxing.rxlife:rxlife-rxjava3:2.2.1' //管理RxJava3生命周期，页面销毁，关闭请求
+
+
+    implementation 'com.blankj:utilcodex:1.30.6'
+    kapt 'com.github.bumptech.glide:compiler:4.11.0'
+    api 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0'
+    api 'com.tencent.tbs:tbssdk:44115'
+    implementation 'com.scwang.smart:refresh-layout-kernel:2.0.1'
+    implementation 'com.scwang.smart:refresh-header-classics:2.0.1'    //经典刷新头
+    implementation 'com.scwang.smart:refresh-footer-classics:2.0.1'    //经典加载
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'com.github.getActivity:ShapeView:6.2'
+    implementation 'com.github.satyan:sugar:1.5'
+}

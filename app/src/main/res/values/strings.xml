@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">aaaBS</string>
+    <string name="string_delete_download_task_tip">是否删除%s的下载任务及安装包？</string>
+</resources>

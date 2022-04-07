@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/frame_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.hjq.shape.layout.ShapeConstraintLayout
+        android:id="@+id/cl_contain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:clickable="true"
+        android:paddingHorizontal="18dp"
+        android:paddingVertical="26dp"
+        app:shape_solidColor="@color/white"
+        app:shape_topLeftRadius="13dp"
+        app:shape_topRightRadius="13dp">
+
+        <TextView
+            android:id="@+id/tv_delete_task_tip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/string_delete_download_task_tip"
+            android:textColor="@color/color_f66"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/tv_sure"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintDimensionRatio="H,5:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_delete_task_tip"
+            app:layout_constraintWidth_percent="0.55"
+            app:shape_radius="30dp"
+            app:shape_solidColor="@color/theme_color" />
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="5dp"
+            android:text="取消"
+            android:textColor="@color/color_f69"
+            android:textSize="16sp"
+            app:layout_constraintDimensionRatio="H,5:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_sure" />
+    </com.hjq.shape.layout.ShapeConstraintLayout>
+</FrameLayout>

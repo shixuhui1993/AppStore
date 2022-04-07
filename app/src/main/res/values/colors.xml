@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="transparency">#00000000</color>
+    <color name="themeBackgroundColor">#f5f5f5</color>
+    <color name="homeBottomTabColorSel">@color/theme_color</color>
+    <color name="homeBottomTabColorNor">@color/color_f63</color>
+    <color name="theme_color">#15C5CE</color>
+    <color name="theme_color_light">#764ECB</color>
+    <color name="color_f63">#333333</color>
+    <color name="color_f69">#999999</color>
+    <color name="color_f66">#666666</color>
+    <color name="color_text_subhead">#A6A6A6</color>
+    <color name="color_theme_grey_bg">#EDEDED</color>
+    <color name="color_status_tran">#FF9914</color>
+    <color name="color_status_complete">#5C4EB6</color>
+    <color name="color_text_theme_80_white">#ccffffff</color>
+    <color name="color_text_theme_70_white">#b0ffffff</color>
+    <color name="color_text_theme_50_white">#80ffffff</color>
+    <color name="color_text_theme_20_white">#33ffffff</color>
+    <color name="color_text_theme_10_white">#19ffffff</color>
+</resources>

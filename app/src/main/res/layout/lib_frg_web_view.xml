@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.duoyou.develop.view.VerticalSwipeRefreshLayout
+            android:id="@+id/web_view_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:overScrollMode="never">
+
+            <com.duoyou.develop.view.MyWebView
+                android:id="@+id/web_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+
+        </com.duoyou.develop.view.VerticalSwipeRefreshLayout>
+
+        <com.duoyou.develop.view.LoadingView
+            android:id="@+id/loading_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+
+        <include layout="@layout/lib_lay_error_holder" />
+    </RelativeLayout>
+</layout>

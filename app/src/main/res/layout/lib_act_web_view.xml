@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="1dp"
+    android:layout_height="1dp"
+    android:background="@color/transparency"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_title_contain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/title_bar_layout"
+            layout="@layout/lib_common_title_bar_layout"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/view_web_status_bar"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="0dp" />
+    </RelativeLayout>
+
+
+    <com.duoyou.develop.view.VerticalSwipeRefreshLayout
+        android:id="@+id/web_view_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_title_contain"
+        android:orientation="vertical"
+        android:overScrollMode="never">
+
+        <com.duoyou.develop.view.MyWebView
+            android:id="@+id/web_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never" />
+
+    </com.duoyou.develop.view.VerticalSwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/test_tv"
+        android:layout_width="300dip"
+        android:layout_height="300dip"
+        android:layout_centerInParent="true"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"
+        android:visibility="gone" />
+
+    <include layout="@layout/lib_common_error_layout" />
+
+
+    <ScrollView
+        android:id="@+id/scrollview_score_store"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="72dp"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--      <View-->
+            <!--        android:layout_width="0dp"-->
+            <!--        android:layout_height="220dp" />-->
+
+            <RelativeLayout
+                android:id="@+id/emar_store_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="220dp"
+                android:tag="emarStoreFragment" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/tv_cpl_slogan"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:background="#ff0000"
+        android:visibility="gone" />
+
+</RelativeLayout>

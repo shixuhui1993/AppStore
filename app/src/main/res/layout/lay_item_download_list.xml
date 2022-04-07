@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="10dp"
+    android:paddingVertical="6dp">
+
+    <com.hjq.shape.layout.ShapeConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="12dp"
+        app:shape_radius="8dp"
+        app:shape_solidColor="@color/white">
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_app_icon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:src="#ff00ff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.15"
+            app:riv_corner_radius="8dp" />
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:padding="2dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="@id/iv_app_icon"
+            app:layout_constraintRight_toRightOf="@id/iv_app_icon"
+            android:layout_marginTop="-6dp"
+            android:layout_marginRight="-6dp"
+            android:src="@drawable/icon_close_red" />
+
+        <TextView
+            android:id="@+id/tv_app_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:maxLines="2"
+            android:text="苹果13手机5G"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/iv_app_icon"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_app_icon" />
+
+
+        <TextView
+            android:id="@+id/tv_file_total_size"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:maxLines="2"
+            android:text="121M"
+            android:textColor="@color/color_f69"
+            android:textSize="10sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_app_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_app_name" />
+
+
+        <TextView
+            android:id="@+id/tv_sale_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="3dp"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="4dp"
+            android:paddingVertical="2dp"
+            android:text="首充4折"
+            android:textColor="#F25B38"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_app_icon"
+            app:layout_constraintLeft_toLeftOf="@id/tv_app_name" />
+
+
+        <TextView
+            android:id="@+id/tv_operate"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="打开"
+            android:textColor="#15C5CE"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_app_icon"
+            app:layout_constraintDimensionRatio="H,66:26"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.18"
+            app:shape_radius="30dp"
+            app:shape_solidColor="#EFF9FA" />
+    </com.hjq.shape.layout.ShapeConstraintLayout>
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <root-path
+        name="root_path"
+        path="/storage/emulated/0/Android/data/com.duoyou_cps.appstore/files/Documents" />
+    <external-path
+        name="external_files"
+        path="." />
+
+    <cache-path
+        name="data_path"
+        path="data/data" />
+
+    <external-path
+        name="download"
+        path="download" />
+
+<!--    <external-path name="tt_external_root" path="." />-->
+<!--    <external-path name="tt_external_download" path="Download" />-->
+<!--    <external-files-path name="tt_external_files_download" path="Download" />-->
+<!--    <files-path name="tt_internal_file_download" path="Download" />-->
+<!--    <cache-path name="tt_internal_cache_download" path="Download" />-->
+<!--    <root-path name="root" path="" />-->
+</paths>

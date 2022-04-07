@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/icon_login_bg"
+    tools:context=".ui.act.ServiceInfoActivity">
+
+    <include
+        android:id="@+id/title_bar_layout"
+        layout="@layout/lib_common_title_bar_layout" />
+
+    <com.hjq.shape.view.ShapeTextView
+        android:id="@+id/tv_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="H,338:376"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_bar_layout"
+        app:layout_constraintWidth_percent="0.94"
+        app:shape_radius="20dp"
+        app:shape_solidColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/iv_portrait"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="3dp"
+        app:layout_constraintBottom_toTopOf="@id/tv_bg"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_bg"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <TextView
+        android:id="@+id/tv_contact_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="asdfasdfdasfsa"
+        android:textColor="@color/theme_color"
+        android:textSize="24sp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tv_copy"
+        app:layout_constraintTop_toBottomOf="@id/iv_portrait" />
+
+    <com.hjq.shape.view.ShapeTextView
+        android:id="@+id/tv_copy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:gravity="center"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="3dp"
+        android:text="复制"
+        android:textColor="@color/theme_color"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_contact_num"
+        app:layout_constraintLeft_toRightOf="@id/tv_contact_num"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_contact_num"
+        app:shape_radius="20dp"
+        app:shape_strokeColor="@color/theme_color"
+        app:shape_strokeWidth="1dp" />
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="请添加唯一客服联系方式，谨防被骗"
+        android:textColor="@color/color_f69"
+        android:textSize="11sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_contact_num" />
+
+    <ImageView
+        android:id="@+id/iv_qr_code"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintTop_toBottomOf="@id/tv_tip"
+        app:layout_constraintWidth_percent="0.55"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_bg"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

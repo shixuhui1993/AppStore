@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.act.BindOrUnBindMobileActivity">
+
+    <include
+        android:id="@+id/title_bar_layout"
+        layout="@layout/lib_common_title_bar_layout" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="修改密码"
+        android:textColor="@color/color_f63"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_bar_layout"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <TextView
+        android:id="@+id/tv_old_psw_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="手机号码："
+        android:textColor="@color/color_f66"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toLeftOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <EditText
+        android:id="@+id/et_phone_num"
+        style="@style/et_bottom_line_color"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:focusable="true"
+        android:inputType="phone"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@id/tv_title"
+        app:layout_constraintRight_toRightOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_old_psw_tip" />
+
+    <TextView
+        android:id="@+id/tv_code_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="验证码："
+        android:textColor="@color/color_f66"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toLeftOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/et_phone_num"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <EditText
+        android:id="@+id/et_code"
+        style="@style/et_bottom_line_color"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:inputType="number"
+        android:maxEms="6"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@id/tv_title"
+        app:layout_constraintRight_toRightOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_code_tip" />
+
+    <com.hjq.shape.view.ShapeTextView
+        android:id="@+id/tv_code"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="获取"
+        android:textColor="@color/theme_color"
+        app:layout_constraintBottom_toBottomOf="@id/et_code"
+        app:layout_constraintDimensionRatio="H,66:26"
+        app:layout_constraintRight_toRightOf="@id/et_code"
+        app:layout_constraintWidth_percent="0.2"
+        app:shape_radius="20dp"
+        app:shape_solidColor="#EFF9FA" />
+
+
+    <com.hjq.shape.view.ShapeTextView
+        android:id="@+id/tv_sure"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="33dp"
+        android:alpha="0.3"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="修改"
+        android:maxEms="6"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintDimensionRatio="W,45:286"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_code"
+        app:layout_constraintWidth_percent="0.8"
+        app:shape_radius="30dp"
+        app:shape_solidColor="@color/theme_color" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

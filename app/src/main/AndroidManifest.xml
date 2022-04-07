@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.duoyou_cps.appstore">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name="com.duoyou.develop.application.DyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/MyNoActionbar">
+        <activity
+            android:name=".ui.act.SplashActivity"
+            android:theme="@style/SplashTheme"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.act.ServiceInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.act.AboutMeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.act.BindOrUnBindMobileActivity"
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".ui.UserLoginActivity" -->
+        <!-- android:exported="false" /> -->
+        <activity
+            android:name=".ui.act.AppDownloadManaActivity"
+            android:exported="false" />
+        <activity android:name=".ui.act.UserLoginActivity" />
+        <activity android:name=".MainActivity">
+
+        </activity>
+        <activity android:name=".ui.act.ChangePswActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.myfileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <meta-data
+            android:name="DATABASE"
+            android:value="app_store.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="1" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="${applicationId}.db" />
+    </application>
+
+</manifest>

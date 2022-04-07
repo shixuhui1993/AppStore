@@ -1,0 +1,50 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+  <!-- Base application theme. -->
+  <style name="Theme.AppStore" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <!-- Primary brand color. -->
+    <item name="colorPrimary">@color/purple_500</item>
+    <item name="colorPrimaryVariant">@color/purple_700</item>
+    <item name="colorOnPrimary">@color/white</item>
+    <!-- Secondary brand color. -->
+    <item name="colorSecondary">@color/teal_200</item>
+    <item name="colorSecondaryVariant">@color/teal_700</item>
+    <item name="colorOnSecondary">@color/black</item>
+    <!-- Status bar color. -->
+    <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+    <!-- Customize your theme here. -->
+  </style>
+
+  <style name="MyNoActionbar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+  </style>
+  <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <!-- 将splash图片设置在这，这样这张图片取代白屏 -->
+    <item name="android:windowBackground">@drawable/layer_splash</item>
+    <item name="windowNoTitle">true</item>
+    <item name="windowActionBar">false</item>
+    <item name="android:windowContentOverlay">@null</item>
+  </style>
+
+  <style name="DyDialogStyle" parent="@android:style/Theme.Holo.Light.Dialog"> <!-- 窗口背景色 -->
+    <item name="android:windowBackground">@android:color/transparent</item> <!--是否有覆盖-->
+    <item name="android:windowContentOverlay">@null</item> <!-- 浮于Activity之上 -->
+    <item name="android:windowIsFloating">true</item> <!-- 边框 -->
+    <item name="android:windowFrame">@null</item> <!-- Dialog以外的区域模糊效果 -->
+    <item name="android:backgroundDimEnabled">true</item> <!-- 无标题 -->
+    <item name="android:windowNoTitle">true</item> <!-- 半透明 -->
+    <item name="android:windowIsTranslucent">true</item> <!--进出动画-->
+    <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+  </style>
+  <style name="ProgressBar_Mini" parent="Widget.AppCompat.ProgressBar.Horizontal">
+    <item name="android:maxHeight">5dip</item>
+    <item name="android:minHeight">3dip</item>
+<!--    <item name="android:indeterminateOnly">false</item>-->
+<!--    <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>-->
+<!--    <item name="android:progressDrawable">@drawable/progressbar_mini</item>-->
+  </style>
+
+  <style name="et_bottom_line_color" parent="Theme.AppCompat.Light">
+    <item name="colorControlNormal">#E6E6E6</item>
+    <item name="colorControlActivated">@color/theme_color</item>
+  </style>
+</resources>
